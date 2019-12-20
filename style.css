@@ -1,11 +1,12 @@
 @font-face {
   font-family: knight;
-  src: url(monica.ttf);
+  src: url(./assets/monica.ttf);
 }
 
 body {
 	margin:0;
 	overflow-x: hidden;
+	background-color:#131921;
 }
 
 * {
@@ -33,7 +34,7 @@ body {
 	top: 10px;
 	height: 97%;
 	z-index:999;
-	width: 400px;
+	width: 30vw;
 }
 
 #hori{
@@ -67,6 +68,54 @@ body {
 	margin-left:30px;
 	font-size:3vh;
 	color:white;
+}
+
+.title2, .title3, .title4, .title5 {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	color:white;
+	font-size:3.5vh;
+}	
+
+.title2 {
+	width:60%;
+	height:40px;
+	position:absolute;
+	top:90;
+	left:-30;
+	background-color: #2d78bd;
+	box-shadow:1px 1px 4px #000;
+}
+
+.title3 {
+	width:60%;
+	height:40px;
+	position:absolute;
+	top:50;
+	right:-30;
+	background-color: #2d78bd;
+	box-shadow:1px 1px 4px #000;
+}
+
+.title4 {
+	width:60%;
+	height:40px;
+	position:absolute;
+	bottom:40;
+	left:-30;
+	background-color: #2d78bd;
+	box-shadow:1px 1px 4px #000;
+}
+
+.title5 {
+	width:60%;
+	height:40px;
+	position:absolute;
+	bottom:60;
+	right:-30;
+	background-color: #2d78bd;
+	box-shadow:1px 1px 4px #000;
 }
 
 #heart{
