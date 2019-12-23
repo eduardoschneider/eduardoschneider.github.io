@@ -8,7 +8,8 @@
 <div class="loader" id="loader">
 	<div class="lds-hourglass"></div>
 	Loading. Please wait.
-	</div>
+</div>
+<div style="width:4px; height:4px; border-radius:100%; z-index:9999; background-color:white; top:50%; position:fixed; left:-50px; box-shadow: 0px 0px 3px black; animation:flash2 6s alternate infinite, sex 20s alternate infinite; " id="square"></div>
 
 <section style="margin:0 auto;width:1000px;height:1000%">
 	<div class="firefly"></div>
@@ -99,6 +100,7 @@ var $horizontal4 = $('#hori4');
 var $horizontal5 = $('#hori5');
 var $heart = $('#heart');
 var $chevron = $('#chevron');
+var $square = $('#square');
 $(window).scroll(function () {
 	var s = $(this).scrollTop(),
 		d = $(document).height(),
@@ -145,6 +147,13 @@ $(window).scroll(function () {
 		'opacity': 1 - scrollPercent * 9
 		
 	});
+	
+	$square.css({
+		'left': scrollPercent * 1000,
+		'top':  400 + Math.sin(scrollPercent * 6) * 200,
+		'opacity': scrollPercent * 5
+	});
+	
 });
 </script>
 </html>

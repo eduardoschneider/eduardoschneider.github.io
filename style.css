@@ -1453,6 +1453,18 @@ html, body {
   }
 }
 
+@keyframes flash2 {
+  0% {
+    box-shadow: 0 0 0vw 0vw #096661;
+  }
+  50% {
+    box-shadow: 0 0 2vw 0.4vw #096661;
+  }
+  100% {
+    box-shadow: 0 0 0vw 0vw #096661;
+  }
+}
+
 .container {
   position: fixed;
   bottom:70px;
@@ -1568,4 +1580,32 @@ html, body {
   100% {
     transform: rotate(1800deg);
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@-webkit-keyframes sex {
+      0% {
+            -webkit-transform: translateX(0vw) translateY(0vh);
+      }
+	  33% {
+            -webkit-transform: translateX(10vw) translateY(30vh);
+      }
+	  66% {
+            -webkit-transform: translateX(20vw) translateY(20vh);
+      }
+	  99% {
+            -webkit-transform: translateX(0vw) translateY(0vh);
+      }
 }
