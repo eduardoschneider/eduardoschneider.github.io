@@ -14,6 +14,109 @@ body {
 
 }
 
+.square {
+	width:4px; height:4px; border-radius:100%; z-index:100; background-color:white; top:50%; position:fixed; left:-50px; box-shadow: 0px 0px 3px black;
+}
+
+.container-languages img:hover {
+	border-radius:0 !important;
+	transition: 0.5s;
+}
+
+.container-languages img {
+	 -webkit-transition: border-radius 0.5s;
+}
+
+.square1 {
+	 animation:flash2 6s alternate infinite, move15 100s alternate infinite;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+
+  opacity:0;
+  width:0px;
+  color: #fff;
+  text-align: center;
+  border-radius: 0px 12px 12px 0px;
+  padding: 5px 0;
+  font-size:23px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index:999;    
+  -webkit-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+}
+
+.tooltip:hover .tooltiptext {
+  opacity:1;
+  width:140px;
+
+}
+
+.bg-tooltip1 {
+	background-color:#ba032b;
+}
+
+.bg-tooltip2 {
+	background-color:#553A7D;
+}
+
+.bg-tooltip3 {
+	background-color:#777BB3;
+}
+
+.bg-tooltip4 {
+	background-color:#FA4E38;
+}
+
+.bg-tooltip5 {
+	background-color:#f12c0c;
+}
+
+.bg-tooltip6 {
+	background-color:#F7E018;
+	color:black !important;
+	font-weight:bold;
+}
+
+.bg-tooltip7 {
+	background-color:#478AFF;
+}
+
+.bg-tooltip8 {
+	background-color:#007ACC;
+}
+
+.bg-tooltip9 {
+	background-color:#FA572B;
+}
+
+
+.square2 {
+	 animation:flash2 6s alternate infinite, move13 100s alternate infinite;
+}
+
+.square3 {
+	 animation:flash2 6s alternate infinite, move11 100s alternate infinite;
+}
+
+.square4 {
+	 animation:flash2 6s alternate infinite, move9 100s alternate infinite;
+}
+
+.square5 {
+	 animation:flash2 6s alternate infinite, move7 100s alternate infinite;
+}
+
+.square6 {
+	 animation:flash2 6s alternate infinite, move5 100s alternate infinite;
+}
 .loader {
 	position:fixed;
 	width:100%;
@@ -33,7 +136,7 @@ body {
 	background-color:rgba(0, 0, 0, 0.73);
 	top: 10px;
 	height: 97%;
-	z-index:999;
+	z-index:100;
 	width: 30vw;
 }
 
@@ -66,7 +169,7 @@ body {
 
 .description-slide {
 	margin-left:30px;
-	font-size:3vh;
+	font-size:5vh;
 	color:white;
 }
 
@@ -82,10 +185,26 @@ body {
 	width:60%;
 	height:40px;
 	position:absolute;
-	top:90;
+	top:30;
 	left:-30;
 	background-color: #2d78bd;
 	box-shadow:1px 1px 4px #000;
+}
+
+.container-languages {
+	width:80%;
+	height:70%;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	flex-wrap: wrap;
+	color:white;
+	font-size:5vh;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
 }
 
 .title3 {
@@ -119,7 +238,7 @@ body {
 }
 
 #heart{
-    z-index: 100;
+    z-index: 120;
 	position: fixed; 
 	left: 5%; 
 	bottom:35%;

@@ -1,7 +1,9 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="stylesheet" type="text/css" href="responsive.css">
+	<link rel="stylesheet" type="text/css" href="responsive.css">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
 </head>
 
 <body>
@@ -9,9 +11,15 @@
 	<div class="lds-hourglass"></div>
 	Loading. Please wait.
 </div>
-<div style="width:4px; height:4px; border-radius:100%; z-index:9999; background-color:white; top:50%; position:fixed; left:-50px; box-shadow: 0px 0px 3px black; animation:flash2 6s alternate infinite, sex 20s alternate infinite; " id="square"></div>
 
-<section style="margin:0 auto;width:1000px;height:1000%">
+<div class="square square1" id="square"></div>
+<div class="square square2" id="square2"></div>
+<div class="square square3" id="square3"></div>
+<div class="square square4" id="square4"></div>
+<div class="square square5" id="square5"></div>
+<div class="square square6" id="square6"></div>
+
+<section class="box" style="margin:0 auto;width:1000px;height:1000%">
 	<div class="firefly"></div>
 	<div class="firefly"></div>
 	<div class="firefly"></div>
@@ -36,16 +44,71 @@
 		<img src="./assets/photo1.png" class="img-slide"/>
 		<br/><br/>
 		<div class="description-slide">
-		well, this is me.<br/>
-		I'm 22, from Campinas-SP (Brazil) and I've been developing since 2016.<br/>
-		I'm kinda weirdo but actually very nice, my hobbies <br/> include playing online, watch movies and animes.
+		this is me, I'm 22<br/>
+		currently living in Brazil, but I would love to change that!<br/>
+		
 		</div>
 	</div>
 
-<div id="hori2" class="allCards">
+<div id="hori2" class="allCards" style="display:flex; justify-content:center; align-items:center;">
 	<div class="title2">
-		Languages I Speak
-	</div>	
+		Things I work with
+	</div>
+
+	<div class="container-languages">
+		<div class="tooltip">
+			<img class="img1" src="./assets/angular.png" width="80px" style="background-color:#ba032b; border-radius:15px;">
+			<span class="tooltiptext bg-tooltip1">Angular</span>
+		</div>
+		
+		<div class="tooltip">
+			<img src="./assets/bootstrap.png" width="80px" style="background-color:#553A7D; border-radius:15px;"/>
+			<span class="tooltiptext bg-tooltip2">Bootstrap</span>
+		</div>
+		
+		<div class="tooltip">
+			<img src="./assets/php.png" width="80px" style="background-color:#777BB3; border-radius:15px;"/>
+			<span class="tooltiptext bg-tooltip3">PHP</span>
+		</div>
+		
+		<div class="break"></div>
+		
+		<div class="tooltip">
+			<img src="./assets/laravel.png" width="50px" height="50px" style="background-color:#FA4E38; border:15px solid #FA4E38; border-radius:15px;"/>
+			<span class="tooltiptext bg-tooltip4">Laravel</span>
+		</div>
+		
+		<div class="tooltip">
+			<img src="./assets/java.png" width="50px" height="50px" style="background-color:#f12c0c; border:15px solid #f12c0c; border-radius:15px;"/>
+			<span class="tooltiptext bg-tooltip5">Java</span>
+		</div>
+		
+		<div class="tooltip">
+			<img src="./assets/javascript.png" width="80px" height="80px" style="background-color:#465a7f; border-radius:15px;"/>
+			<span class="tooltiptext bg-tooltip6">Javascript</span>
+		</div>
+		
+		<div class="break"></div>
+		
+		<div class="tooltip">
+			<img src="./assets/ionic.png" width="50px" height="50px" style="background-color:#478AFF; border:15px solid #478AFF; border-radius:15px;"/>
+			<span class="tooltiptext bg-tooltip7">Ionic</span>
+		</div>
+		
+		<div class="tooltip">
+			<img src="./assets/typescript.png" width="80px" height="80px" style="background-color:#007ACC; border-radius:15px;"/>
+			<span class="tooltiptext bg-tooltip8">TypeScript</span>
+		</div>
+		
+		<div class="tooltip">
+			<img src="./assets/swift.png" width="50px" height="40px" style="background-color:#FA572B; border:15px solid #FA572B; border-radius:15px; padding-top:5px; padding-bottom:5px;"/>
+			<span class="tooltiptext bg-tooltip9">Swift</span>
+		</div>
+		<div class="break"></div>
+		these above are the ones that I can develop an entire project by my own. <br/>
+		
+	</div>
+	
 </div>
 
 <div id="hori3" class="allCards">
@@ -66,7 +129,7 @@
 	  hi and welcome<br/>
 	  my name is eduardo schneider<br/>
 	  I'm a front-end developer<br/>
-	  and this is my portfolio<br/>
+	  and this is my website<br/>
 	  hope you like it :)
 	  <br/>
 	  <img src="./assets/facebook.png" width="25px" class="img-social" style="background-color:white;"/>
@@ -101,6 +164,12 @@ var $horizontal5 = $('#hori5');
 var $heart = $('#heart');
 var $chevron = $('#chevron');
 var $square = $('#square');
+var $square2 = $('#square2');
+var $square3 = $('#square3');
+var $square4 = $('#square4');
+var $square5 = $('#square5');
+var $square6 = $('#square6');
+
 $(window).scroll(function () {
 	var s = $(this).scrollTop(),
 		d = $(document).height(),
@@ -117,22 +186,22 @@ $(window).scroll(function () {
 	});
 	
 	$horizontal2.css({
-		'right': position - $(document).height()/12,
+		'right': position - $horizontal.height() / 1.25,
 		'opacity': scrollPercent * 3
 	});
 	
 	$horizontal3.css({
-		'right': (position - $(document).height()/12) - $(document).height()/12,
+		'right': (position - $horizontal.height()  / 1.25) - $horizontal.height() / 1.25,
 		'opacity': scrollPercent * 2.2
 	});
 	
 	$horizontal4.css({
-		'right': ((position - $(document).height()/12) - $(document).height()/12) - $(document).height()/12,
+		'right': ((position - $horizontal.height() / 1.25) - $horizontal.height() / 1.25) - $horizontal.height() / 1.25,
 		'opacity': scrollPercent * 1.7
 	});
 	
 	$horizontal5.css({
-		'right': (((position - $(document).height()/12) - $(document).height()/12) - $(document).height()/12) - $(document).height()/12,
+		'right': (((position - $(document).height() / 1.25) - $(document).height() / 1.25) - $(document).height() / 1.25) - $(document).height() / 1.25,
 		'opacity': scrollPercent * 1.4
 	});
 
@@ -150,7 +219,37 @@ $(window).scroll(function () {
 	
 	$square.css({
 		'left': scrollPercent * 1000,
-		'top':  400 + Math.sin(scrollPercent * 6) * 200,
+		'top':  400 + Math.sin(scrollPercent * 6) * 100,
+		'opacity': scrollPercent * 5
+	});
+	
+	$square2.css({
+		'left': scrollPercent * 1000,
+		'top':  200 + (Math.sin(scrollPercent * 6) * -1) * 50,
+		'opacity': scrollPercent * 5
+	});
+	
+	$square3.css({
+		'left': scrollPercent * 1000,
+		'top':  300 + (Math.sin(scrollPercent * 6) * -1) * 50,
+		'opacity': scrollPercent * 5
+	});
+	
+	$square4.css({
+		'left': scrollPercent * 1000,
+		'top':  100 + (Math.sin(scrollPercent * 6) * -1) * 50,
+		'opacity': scrollPercent * 5
+	});
+	
+	$square5.css({
+		'left': scrollPercent * 1000,
+		'top':  100 + (Math.sin(scrollPercent * 6) * -1) * 50,
+		'opacity': scrollPercent * 5
+	});
+	
+	$square6.css({
+		'left': scrollPercent * 1000,
+		'top':  100 + (Math.sin(scrollPercent * 6) * -1) * 50,
 		'opacity': scrollPercent * 5
 	});
 	
